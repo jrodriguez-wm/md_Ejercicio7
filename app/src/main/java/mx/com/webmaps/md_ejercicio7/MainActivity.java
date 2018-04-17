@@ -7,6 +7,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    Snackbar snackbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
         View view = findViewById(R.id.activy_main);
 
-        Snackbar.make(view,"Hello Snackbar",Snackbar.LENGTH_SHORT).show();
+        snackbar = Snackbar.make(view, "Hello SnackBar", Snackbar.LENGTH_LONG);
+
+        snackbar.show();
+
+        //Snackbar.make(view,"Hello Snackbar",Snackbar.LENGTH_SHORT).show();
     }
 }

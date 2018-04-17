@@ -24,7 +24,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 snackbar = Snackbar.make(v, "Message Sent", Snackbar.LENGTH_INDEFINITE);
 
-                snackbar.setDuration(4000);
+                snackbar.setDuration(8000);
+
+                snackbar.setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                snackbar.dismiss();
+                            }
+                        }
+                );
+
                 snackbar.show();
             }
         });

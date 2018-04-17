@@ -16,9 +16,13 @@ public class MainActivity extends AppCompatActivity {
 
         View view = findViewById(R.id.activy_main);
 
-        snackbar = Snackbar.make(view, "Hello SnackBar", Snackbar.LENGTH_LONG);
+        snackbar = Snackbar.make(view, "Hello SnackBar", Snackbar.LENGTH_INDEFINITE);
+
+        snackbar.setDuration(5000);
 
         snackbar.show();
+
+        //snackbar.dismiss();
 
         //Snackbar.make(view,"Hello Snackbar",Snackbar.LENGTH_SHORT).show();
     }
